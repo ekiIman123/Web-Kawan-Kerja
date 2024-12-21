@@ -16,10 +16,60 @@ module.exports = {
           red: '#EF453C',
           bluegray: '#64748B',
         },
-        danger: '#EF4444',
-        success: '#10B981',
+      },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.th1': {
+          fontSize: '48px',
+        },
+        '.th2': {
+          fontSize: '34px',
+        },
+        '.th3': {
+          fontSize: '24px',
+        },
+        '.th4': {
+          fontSize: '20px',
+        },
+        '.fontBody1': {
+          fontSize: '16px',
+        },
+        '.fontBody2': {
+          fontSize: '14px',
+        },
+        '.fontCaption': {
+          fontSize: '12px',
+        },
+        '.fontOverline': {
+          fontSize: '10px',
+        },
+        '.fontBtnSm': {
+          fontWeight: 600,
+          fontSize: '14px',
+        },
+        '.fontBtnMd': {
+          fontWeight: 600,
+          fontSize: '16px',
+        },
+        '.fontBtnLg': {
+          fontWeight: 600,
+          fontSize: '18px',
+        },
+        '.fontVerySmall': {
+          fontWeight: 600,
+          fontSize: '12px',
+        },
+        '.fontSmallest': {
+          fontWeight: 600,
+          fontSize: '10px',
+        },
+      });
+    },
+  ],
 };
