@@ -1,1 +1,17 @@
-/node_modules
+# Dependency
+node_modules/
+
+# Build Output
+dist/
+
+# Environment Files
+.env
+.env.*
+
+# Tailwind CSS
+output.css
+output.css.map
+
+# System Files
+.DS_Store
+Thumbs.db
