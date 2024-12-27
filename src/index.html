@@ -7,13 +7,179 @@
   <title>Document</title>
 
   <link href="./output.css" rel="stylesheet">
+  <link href="./style.css" rel="stylesheet">
 </head>
 
 <body class="flex">
-  <nav class="w-[351px] h-screen bg-red-950">
-    <p class="th1-sb">p</p>
-  </nav>
-  <main class="bg-blue-300 w-screen h-screen"></main>
+  <!-- aside component -->
+  <aside
+    class="w-[351px] h-screen p-[40px] bg-primary-black fixed top-0 left-0 flex flex-col justify-start items-start gap-[24px] text-primary-white">
+    <img class="w-1/2" src="https://ik.imagekit.io/571fcyuhs/Loop/logo%20kawan%20kerja.jpg?updatedAt=1734850111568"
+      alt="logo kawan kerja">
+    <hr class="w-full bg-primary-white">
+    <div class="nav-menu w-full flex flex-col gap-[16px]">
+      <p class="font-bold text-title3">Menu</p>
+      <ul class="flex flex-col gap-[16px] text-body1 ">
+        <li
+          class="bg-secondary-blue w-full h-[56px]  rounded-[8px] flex gap-[16px] justify-start items-center p-[16px] font-bold">
+          <img class="w-[24px]" src="https://ik.imagekit.io/571fcyuhs/Loop/home-icon.png?updatedAt=1734877681663"
+            alt="home icon">
+          Beranda
+          <img class="w-[24px] ml-[auto]"
+            src="https://ik.imagekit.io/571fcyuhs/Loop/arrow-icon.png?updatedAt=1734877739048" alt="arrow icon">
+        </li>
+        <li class="h-[56px] w-full bg-primary-black rounded-[8px] flex gap-[16px] justify-start items-center p-[16px]">
+          <img class="w-[24px]" src="https://ik.imagekit.io/571fcyuhs/Loop/newPost-icon.png?updatedAt=1734877423601"
+            alt="new post icon">Beranda
+        </li>
+        <li class="h-[56px] w-full bg-primary-black rounded-[8px] flex gap-[16px] justify-start items-center p-[16px]">
+          <img class="w-[24px]" src="https://ik.imagekit.io/571fcyuhs/Loop/logout-icon.png?updatedAt=1734877458809"
+            alt="logout icon">Beranda
+        </li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- main component -->
+  <main class="w-full ml-[351px] h-screen bg-primary-white">
+
+    <!-- header component -->
+    <header class="w-full h-[83px] shadow-lg px-[40px] py-[16px]"></header>
+
+    <!-- main content -->
+    <div class="content flex flex-col gap-[20px] w-full h-full p-[40px]">
+
+      <div class="w-full content-title flex items-center justify-between">
+        <p class="text-title2 font-semibold">Beranda</p>
+        <button class="bg-secondary-blue px-[32px] py-[10px] rounded-[12px] text-primary-white">
+          <p class="btnLg font-semibold">Create</p>
+        </button>
+      </div>
+
+      <!-- component admin - user -->
+      <!-- <div class="w-full flex items-center gap-[10px]">
+
+        <div
+          class="content-filterSearch w-full flex items-center gap-[10px] px-[24px] border border-secondary-gray rounded-[8px]">
+          <div class="icon-search">
+            <img src="https://ik.imagekit.io/571fcyuhs/Loop/search.png?updatedAt=1735286260121
+            " alt="Search Icon" class="w-6 h-6">
+          </div>
+          <input class="w-full rounded-[8px] py-[16px] focus:outline-none" type="text" placeholder="Search Content">
+        </div>
+
+        <select
+          class="w-[200px] rounded-[8px] px-[12px] py-[16px] focus:outline-none border border-secondary-gray appearance-none bg-no-repeat bg-right pr-[40px]"
+          style="background-image: url('https://ik.imagekit.io/571fcyuhs/Loop/arrow-up.png?updatedAt=1735288160380'); background-size: 16px; background-position: calc(100% - 12px);">
+          <option value="" disabled selected>Pilih Kategori</option>
+          <option value="kategori1">Kategori 1</option>
+          <option value="kategori2">Kategori 2</option>
+          <option value="kategori3">Kategori 3</option>
+          <option value="kategori4">Kategori 4</option>
+        </select>
+      </div> -->
+
+      <!-- component admin - admin -->
+      <div
+        class="content-filterSearch w-full flex items-center gap-[16px] px-[24px] border border-secondary-gray rounded-[8px]">
+        <div class="icon-search">
+          <img src="https://ik.imagekit.io/571fcyuhs/Loop/search.png?updatedAt=1735286260121
+        " alt="Search Icon" class="w-6 h-6">
+        </div>
+        <input class="w-full py-[16px] focus:outline-none" type="text" placeholder="Search Content">
+      </div>
+
+      <!-- table content -->
+      <table class="table-fixed w-full border-collapse border border-secondary-gray">
+        <thead class="bg-secondary-blue text-primary-white text-body1 font-bold">
+          <tr>
+            <th class="border border-secondary-gray px-5 py-4 text-center w-[107px]">ID Hero</th>
+            <th class="border border-secondary-gray px-4 py-4 text-left w-1/4">Page Name</th>
+            <th class="border border-secondary-gray px-4 py-4 text-left w-1/4">Tagline</th>
+            <th class="border border-secondary-gray px-4 py-4 text-left w-1/4">Description</th>
+            <th class="border border-secondary-gray px-4 py-4 text-left w-1/4">Image</th>
+            <th class="border border-secondary-gray px-4 py-4 text-left w-[111px]">Action</th>
+          </tr>
+        </thead>
+        <tbody class="text-body1">
+          <tr class="hover:bg-gray-100">
+            <td class="border border-secondary-gray px-5 py-4 text-left align-top">1</td>
+            <td class="border border-secondary-gray px-4 py-4 text-left align-top">Homepage</td>
+            <td class="border border-secondary-gray px-4 py-4 text-left align-top">lorem100</td>
+            <td class="border border-secondary-gray px-4 py-4 text-left align-top">Take a look at the product we offer
+              and our track record
+              of solving those problems.</td>
+            <td class="border border-secondary-gray px-4 py-4 text-left align-top">
+              <img src="https://ik.imagekit.io/571fcyuhs/Loop/table-admin1.png?updatedAt=1735294968725" alt="Hero Image"
+                class="h-[99px] object-cover rounded-md">
+            </td>
+            <td class="border border-secondary-gray px-4 py-4 text-left align-top">
+              <div class="action-button flex items-center justify-center gap-4">
+                <button><img src="https://ik.imagekit.io/571fcyuhs/Loop/edit.png?updatedAt=1735296019737" class="w-6"
+                    alt="edit"></button>
+                <button><img src="https://ik.imagekit.io/571fcyuhs/Loop/trash.png?updatedAt=1735295996936" class="w-6"
+                    alt="edit"></button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="table-auto border-collapse border border-gray-300 w-full bg-white shadow-lg">
+        <thead class="bg-gray-200">
+          <tr>
+            <th class="border border-gray-300 px-4 py-2 text-left">ID Hero</th>
+            <th class="border border-gray-300 px-4 py-2 text-left">Page Name</th>
+            <th class="border border-gray-300 px-4 py-2 text-left">Tagline</th>
+            <th class="border border-gray-300 px-4 py-2 text-left">Description</th>
+            <th class="border border-gray-300 px-4 py-2 text-left">Image</th>
+            <th class="border border-gray-300 px-4 py-2 text-left">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Baris 1 -->
+          <tr class="hover:bg-gray-100">
+            <td class="border border-gray-300 px-4 py-2">1</td>
+            <td class="border border-gray-300 px-4 py-2">Home</td>
+            <td class="border border-gray-300 px-4 py-2">Welcome to Our Site</td>
+            <td class="border border-gray-300 px-4 py-2">This is the home page description.</td>
+            <td class="border border-gray-300 px-4 py-2">
+              <img src="https://via.placeholder.com/50" alt="Image" class="w-12 h-12 object-cover rounded">
+            </td>
+            <td class="border border-gray-300 px-4 py-2">
+              <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Edit</button>
+            </td>
+          </tr>
+          <!-- Baris 2 -->
+          <tr class="hover:bg-gray-100">
+            <td class="border border-gray-300 px-4 py-2">2</td>
+            <td class="border border-gray-300 px-4 py-2">About</td>
+            <td class="border border-gray-300 px-4 py-2">Learn More About Us</td>
+            <td class="border border-gray-300 px-4 py-2">This is the about page description.</td>
+            <td class="border border-gray-300 px-4 py-2">
+              <img src="https://via.placeholder.com/50" alt="Image" class="w-12 h-12 object-cover rounded">
+            </td>
+            <td class="border border-gray-300 px-4 py-2">
+              <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Edit</button>
+            </td>
+          </tr>
+          <!-- Baris 3 -->
+          <tr class="hover:bg-gray-100">
+            <td class="border border-gray-300 px-4 py-2">3</td>
+            <td class="border border-gray-300 px-4 py-2">Contact</td>
+            <td class="border border-gray-300 px-4 py-2">Reach Out to Us</td>
+            <td class="border border-gray-300 px-4 py-2">This is the contact page description.</td>
+            <td class="border border-gray-300 px-4 py-2">
+              <img src="https://via.placeholder.com/50" alt="Image" class="w-12 h-12 object-cover rounded">
+            </td>
+            <td class="border border-gray-300 px-4 py-2">
+              <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Edit</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
 
 
   <script type="module" src="./script.js"></script>
