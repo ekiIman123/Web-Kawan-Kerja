@@ -13,54 +13,72 @@
 <body class="flex">
   <!-- aside component -->
   <aside
-    class="w-[351px] h-screen p-[40px] bg-primary-black fixed top-0 left-0 flex flex-col justify-start items-start gap-[24px] text-primary-white">
+    class="w-[351px] h-screen p-[40px] bg-black fixed top-0 left-0 flex flex-col justify-start items-start gap-[24px] text-white">
     <img class="w-1/2" src="https://ik.imagekit.io/571fcyuhs/Loop/logo%20kawan%20kerja.jpg?updatedAt=1734850111568"
       alt="logo kawan kerja">
-    <hr class="w-full bg-primary-white">
-    <div class="nav-menu w-full flex flex-col gap-[16px]">
+    <hr class="w-full bg-white">
+    <div class="aside-menu w-full flex flex-col gap-[16px]">
       <p class="font-bold text-title3">Menu</p>
       <ul class="flex flex-col gap-[16px] text-body1 ">
-        <li
-          class="bg-secondary-blue w-full h-[56px]  rounded-[8px] flex gap-[16px] justify-start items-center p-[16px] font-bold">
-          <img class="w-[24px]" src="https://ik.imagekit.io/571fcyuhs/Loop/home-icon.png?updatedAt=1734877681663"
-            alt="home icon">
-          Beranda
-          <img class="w-[24px] ml-[auto]"
-            src="https://ik.imagekit.io/571fcyuhs/Loop/arrow-icon.png?updatedAt=1734877739048" alt="arrow icon">
+        <li>
+          <a class="h-[56px] w-full bg-blue rounded-[8px] flex gap-[16px] justify-start items-center p-[16px] font-bold"
+            href="./index.html">
+            <img class="w-[24px]" src="https://ik.imagekit.io/571fcyuhs/Loop/home-icon.png?updatedAt=1734877681663"
+              alt="home icon">
+            Beranda
+            <img class="w-[24px] ml-[auto]"
+              src="https://ik.imagekit.io/571fcyuhs/Loop/arrow-icon.png?updatedAt=1734877739048" alt="arrow icon">
+          </a>
         </li>
-        <li class="h-[56px] w-full bg-primary-black rounded-[8px] flex gap-[16px] justify-start items-center p-[16px]">
-          <img class="w-[24px]" src="https://ik.imagekit.io/571fcyuhs/Loop/newPost-icon.png?updatedAt=1734877423601"
-            alt="new post icon">Beranda
+        <li>
+          <a class="h-[56px] w-full bg-black rounded-[8px] flex gap-[16px] justify-start items-center p-[16px]"
+            href="./new-post.html">
+            <img class="w-[24px]" src="https://ik.imagekit.io/571fcyuhs/Loop/newPost-icon.png?updatedAt=1734877423601"
+              alt="new post icon">Postingan Baru
+          </a>
         </li>
-        <li class="h-[56px] w-full bg-primary-black rounded-[8px] flex gap-[16px] justify-start items-center p-[16px]">
-          <img class="w-[24px]" src="https://ik.imagekit.io/571fcyuhs/Loop/logout-icon.png?updatedAt=1734877458809"
-            alt="logout icon">Beranda
+        <li>
+          <a class="h-[56px] w-full bg-black rounded-[8px] flex gap-[16px] justify-start items-center p-[16px]" href="">
+            <img class="w-[24px]" src="https://ik.imagekit.io/571fcyuhs/Loop/logout-icon.png?updatedAt=1734877458809"
+              alt="logout icon">Log Out
+          </a>
         </li>
       </ul>
     </div>
   </aside>
 
   <!-- main component -->
-  <main class="w-full ml-[351px] h-screen bg-primary-white">
+  <main class="w-full ml-[351px] h-screen bg-white">
 
     <!-- header component -->
-    <header class="w-full h-[83px] shadow-lg px-[40px] py-[16px]"></header>
+    <header class="w-full h-[83px] shadow-lg px-[40px] py-[16px] flex justify-end">
+      <div class="user-profile h-full w-[184px] flex gap-[10px]">
+        <a href="">
+          <img src="https://ik.imagekit.io/571fcyuhs/Loop/user-icon.png?updatedAt=1735543506187" alt="user-icon"
+            class="icon-profile h-full">
+        </a>
+        <div class="summary-profile">
+          <p class="text-title4 font-bold">User 101</p>
+          <p class="text-body2">user101@gmail.com</p>
+        </div>
+      </div>
+    </header>
 
     <!-- main content -->
     <div class="content flex flex-col gap-[20px] w-full h-full p-[40px]">
 
       <div class="w-full content-title flex items-center justify-between">
         <p class="text-title2 font-semibold">Beranda</p>
-        <button class="bg-secondary-blue px-[32px] py-[10px] rounded-[12px] text-primary-white">
+        <button class="bg-blue px-[32px] py-[10px] rounded-[12px] text-white">
           <p class="btnLg font-semibold">Create</p>
         </button>
       </div>
 
       <!-- component admin - user -->
-      <!-- <div class="w-full flex items-center gap-[10px]">
+      <div class="w-full flex items-center gap-[10px]">
 
         <div
-          class="content-filterSearch w-full flex items-center gap-[10px] px-[24px] border border-secondary-gray rounded-[8px]">
+          class="content-filterSearch w-full flex items-center gap-[10px] px-[24px] border border-gray rounded-[8px]">
           <div class="icon-search">
             <img src="https://ik.imagekit.io/571fcyuhs/Loop/search.png?updatedAt=1735286260121
             " alt="Search Icon" class="w-6 h-6">
@@ -68,66 +86,135 @@
           <input class="w-full rounded-[8px] py-[16px] focus:outline-none" type="text" placeholder="Search Content">
         </div>
 
-        <select
-          class="w-[200px] rounded-[8px] px-[12px] py-[16px] focus:outline-none border border-secondary-gray appearance-none bg-no-repeat bg-right pr-[40px]"
-          style="background-image: url('https://ik.imagekit.io/571fcyuhs/Loop/arrow-up.png?updatedAt=1735288160380'); background-size: 16px; background-position: calc(100% - 12px);">
-          <option value="" disabled selected>Pilih Kategori</option>
-          <option value="kategori1">Kategori 1</option>
-          <option value="kategori2">Kategori 2</option>
-          <option value="kategori3">Kategori 3</option>
-          <option value="kategori4">Kategori 4</option>
+        <select id="category-filter"
+          class="w-[200px] rounded-[8px] px-[12px] py-[16px] hover:cursor-pointer focus:outline-none border border-gray appearance-none bg-no-repeat bg-right pr-[40px]"
+          style="background-image: url('https://ik.imagekit.io/571fcyuhs/Loop/arrow-up.png?updatedAt=1735288160380'); background-size: 14px; background-position: calc(100% - 12px);">
+          <option value="All" selected>All Categories</option>
+          <option value="News">News</option>
+          <option value="Article">Article</option>
+          <option value="Blog">Blog</option>
         </select>
-      </div> -->
+      </div>
 
       <!-- component admin - admin -->
-      <div
-        class="content-filterSearch w-full flex items-center gap-[16px] px-[24px] border border-secondary-gray rounded-[8px]">
+      <!-- <div class="content-filterSearch w-full flex items-center gap-[16px] px-[24px] border border-gray rounded-[8px]">
         <div class="icon-search">
           <img src="https://ik.imagekit.io/571fcyuhs/Loop/search.png?updatedAt=1735286260121
         " alt="Search Icon" class="w-6 h-6">
         </div>
         <input class="w-full py-[16px] focus:outline-none" type="text" placeholder="Search Content">
-      </div>
+      </div> -->
 
       <!-- table content -->
-      <table class="table-fixed w-full border-collapse border border-secondary-gray">
-        <thead class="bg-secondary-blue text-primary-white text-body1 font-bold">
+      <table class="table-fixed w-full border-collapse border border-gray">
+        <thead class="bg-blue text-white text-body1 font-bold">
           <tr>
-            <th class="border border-secondary-gray px-5 py-4 text-center w-[107px]">ID Hero</th>
-            <th class="border border-secondary-gray px-4 py-4 text-left w-1/4">Page Name</th>
-            <th class="border border-secondary-gray px-4 py-4 text-left w-1/4">Tagline</th>
-            <th class="border border-secondary-gray px-4 py-4 text-left w-1/4">Description</th>
-            <th class="border border-secondary-gray px-4 py-4 text-left w-1/4">Image</th>
-            <th class="border border-secondary-gray px-4 py-4 text-left w-[111px]">Action</th>
+            <th class="border border-gray px-5 py-4 text-center w-[107px]">ID Hero</th>
+            <th class="border border-gray px-4 py-4 text-left w-1/4">Category</th>
+            <th class="border border-gray px-4 py-4 text-left w-1/4">Title</th>
+            <th class="border border-gray px-4 py-4 text-left w-1/4">Description</th>
+            <th class="border border-gray px-4 py-4 text-left w-1/4">Image</th>
+            <th class="border border-gray px-4 py-4 text-left w-[111px]">Action</th>
           </tr>
         </thead>
-        <tbody class="text-body1">
-          <tr class="hover:bg-gray-100">
-            <td class="border border-secondary-gray px-5 py-4 text-left align-top">1</td>
-            <td class="border border-secondary-gray px-4 py-4 text-left align-top">Homepage</td>
-            <td class="border border-secondary-gray px-4 py-4 text-left align-top">lorem100</td>
-            <td class="border border-secondary-gray px-4 py-4 text-left align-top">Take a look at the product we offer
-              and our track record
-              of solving those problems.</td>
-            <td class="border border-secondary-gray px-4 py-4 text-left align-top">
-              <img src="https://ik.imagekit.io/571fcyuhs/Loop/table-admin1.png?updatedAt=1735294968725" alt="Hero Image"
-                class="h-[99px] object-cover rounded-md">
-            </td>
-            <td class="border border-secondary-gray px-4 py-4 text-left align-top">
-              <div class="action-button flex items-center justify-center gap-4">
-                <button><img src="https://ik.imagekit.io/571fcyuhs/Loop/edit.png?updatedAt=1735296019737" class="w-6"
-                    alt="edit"></button>
-                <button><img src="https://ik.imagekit.io/571fcyuhs/Loop/trash.png?updatedAt=1735295996936" class="w-6"
-                    alt="edit"></button>
-              </div>
-            </td>
-          </tr>
-        </tbody>
+        <tbody id="table-body" class="text-body1"></tbody>
       </table>
     </div>
   </main>
 
+  <script>
+    const data = [
+      {
+        id: 1,
+        category: "Article",
+        title: "Rapid Application Development (RAD): Pendekatan Cepat Dalam Software Development",
+        description: "Dalam dunia teknologi yang berkembang pesat, perusahaan dan tim pengembang aplikasi sering kali dituntut untuk menghasilkan produk yang berkualitas dengan waktu yang lebih singkat. Di sinilah metode Rapid Application Development (RAD) berperan penting. RAD adalah pendekatan pengembangan perangkat lunak yang menekankan pada kecepatan dan fleksibilitas dalam pembuatan aplikasi, memungkinkan tim untuk merespons kebutuhan bisnis yang terus berubah dengan lebih cepat.",
+        image: "https://ik.imagekit.io/571fcyuhs/Loop/table-admin1.png?updatedAt=1735294968725",
+      },
+      {
+        id: 2,
+        category: "Blog",
+        title: "Inovasi Digital untuk Mendukung Bisnis Mikro di Era Pasca-Pandemi",
+        description: "Di era pasca-pandemi, bisnis mikro di Indonesia menghadapi tantangan besar sekaligus peluang baru. Pandemi COVID-19 memang memberi dampak signifikan pada sektor ekonomi, tetapi juga mempercepat adopsi teknologi di kalangan bisnis mikro. Dengan inovasi digital, para pelaku usaha mikro kini dapat bangkit dan bahkan berkembang di era yang serba digital ini.",
+        image: "https://ik.imagekit.io/571fcyuhs/Loop/table-admin2.png?updatedAt=1735294968726",
+      },
+      {
+        id: 3,
+        category: "News",
+        title: "Indonesia Dilanda Badai PHK di Kuartal 4 pada Tahun 2024 di Sektor Perusahaan Teknologi",
+        description: "Pada kuartal keempat tahun 2024, Indonesia mengalami gelombang besar Pemutusan Hubungan Kerja (PHK) di sektor teknologi. Banyak perusahaan teknologi terkemuka terpaksa memangkas jumlah karyawan mereka akibat kondisi ekonomi global yang menantang. Krisis ini tidak hanya memengaruhi perusahaan rintisan (startup), tetapi juga perusahaan teknologi besar yang telah mapan. Alasan utama yang melatarbelakangi PHK ini adalah perlambatan ekonomi, penurunan investasi, dan perubahan kebutuhan pasar.",
+        image: "https://ik.imagekit.io/571fcyuhs/Loop/table-admin3.png?updatedAt=1735294968727",
+      },
+    ];
 
+    const tableBody = document.getElementById("table-body");
+    const categoryFilter = document.getElementById("category-filter");
+
+    // Function to render table rows
+    const renderTable = (filteredData) => {
+      tableBody.innerHTML = ""; // Clear existing rows
+
+      filteredData.forEach((item) => {
+        const row = document.createElement("tr");
+        row.className = "hover:bg-gray-100";
+
+        row.innerHTML = `
+        <td class="border border-gray px-5 py-4 text-left align-top">${item.id}</td>
+        <td class="border border-gray px-4 py-4 text-left align-top">${item.category}</td>
+        <td class="border border-gray px-4 py-4 text-left align-top">${item.title}</td>
+        <td class="border border-gray px-4 py-4 text-left align-top">${item.description}</td>
+        <td class="border border-gray px-4 py-4 text-left align-top">
+          <img src="${item.image}" alt="Hero Image" class="h-[99px] object-cover rounded-md">
+        </td>
+        <td class="border border-gray px-4 py-4 text-left align-top">
+          <div class="action-button flex items-center justify-center gap-4">
+            <button><img src="https://ik.imagekit.io/571fcyuhs/Loop/edit.png?updatedAt=1735296019737" class="w-6" alt="edit"></button>
+            <button><img src="https://ik.imagekit.io/571fcyuhs/Loop/trash.png?updatedAt=1735295996936" class="w-6" alt="delete"></button>
+          </div>
+        </td>
+      `;
+        tableBody.appendChild(row);
+      });
+    };
+
+    // Initial render with all data
+    renderTable(data);
+
+    // Filter data based on selected category
+    categoryFilter.addEventListener("change", (event) => {
+      const selectedCategory = event.target.value;
+
+      if (selectedCategory === "All") {
+        renderTable(data);
+      } else {
+        const filteredData = data.filter((item) => item.category === selectedCategory);
+        renderTable(filteredData);
+      }
+    });
+
+    // data.forEach((item) => {
+    //   const row = document.createElement("tr");
+    //   row.className = "hover:bg-gray-100";
+
+    //   row.innerHTML = `
+    //     <td class="border border-gray px-5 py-4 text-left align-top">${item.id}</td>
+    //     <td class="border border-gray px-4 py-4 text-left align-top">${item.category}</td>
+    //     <td class="border border-gray px-4 py-4 text-left align-top">${item.title}</td>
+    //     <td class="border border-gray px-4 py-4 text-left align-top">${item.description}</td>
+    //     <td class="border border-gray px-4 py-4 text-left align-top">
+    //       <img src="${item.image}" alt="Hero Image" class="h-[99px] object-cover rounded-md">
+    //     </td>
+    //     <td class="border border-gray px-4 py-4 text-left align-top">
+    //       <div class="action-button flex items-center justify-center gap-4">
+    //         <button><img src="https://ik.imagekit.io/571fcyuhs/Loop/edit.png?updatedAt=1735296019737" class="w-6" alt="edit"></button>
+    //         <button><img src="https://ik.imagekit.io/571fcyuhs/Loop/trash.png?updatedAt=1735295996936" class="w-6" alt="delete"></button>
+    //       </div>
+    //     </td>
+    //   `;
+
+    //   tableBody.appendChild(row);
+    // });
+  </script>
   <script type="module" src="./script.js"></script>
 </body>
 

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link href="./output.css" rel="stylesheet">
+  <link href="./style.css" rel="stylesheet">
+</head>
+
+<body class="flex">
+  <!-- aside component -->
+  <aside
+    class="w-[351px] h-screen p-[40px] bg-black fixed top-0 left-0 flex flex-col justify-start items-start gap-[24px] text-white">
+    <img class="w-1/2" src="https://ik.imagekit.io/571fcyuhs/Loop/logo%20kawan%20kerja.jpg?updatedAt=1734850111568"
+      alt="logo kawan kerja">
+    <hr class="w-full bg-white">
+    <div class="aside-menu w-full flex flex-col gap-[16px]">
+      <p class="font-bold text-title3">Menu</p>
+      <ul class="flex flex-col gap-[16px] text-body1 ">
+        <li>
+          <a class="h-[56px] w-full bg-black rounded-[8px] flex gap-[16px] justify-start items-center p-[16px] font-bold"
+            href="./index.html">
+            <img class="w-[24px]" src="https://ik.imagekit.io/571fcyuhs/Loop/home-icon.png?updatedAt=1734877681663"
+              alt="home icon">
+            Beranda
+          </a>
+        </li>
+        <li>
+          <a class="h-[56px] w-full bg-blue rounded-[8px] flex gap-[16px] justify-start items-center p-[16px]"
+            href="./new-post.html">
+            <img class="w-[24px]" src="https://ik.imagekit.io/571fcyuhs/Loop/newPost-icon.png?updatedAt=1734877423601"
+              alt="new post icon">Postingan Baru
+            <img class="w-[24px] ml-[auto]"
+              src="https://ik.imagekit.io/571fcyuhs/Loop/arrow-icon.png?updatedAt=1734877739048" alt="arrow icon">
+          </a>
+        </li>
+        <li>
+          <a class="h-[56px] w-full bg-black rounded-[8px] flex gap-[16px] justify-start items-center p-[16px]" href="">
+            <img class="w-[24px]" src="https://ik.imagekit.io/571fcyuhs/Loop/logout-icon.png?updatedAt=1734877458809"
+              alt="logout icon">Log Out
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- modal component -->
+  <div class="relative z-50">
+    <!-- Overlay -->
+    <div class="fixed inset-0 bg-black/50 backdrop-blur-sm pt-[100px] flex justify-center" id="modal-overlay">
+      <!-- Modal Content -->
+      <div class="flex flex-col bg-white rounded-xl w-[540px] h-[261px] p-5 gap-4">
+        <div class="modal-menu flex flex-col gap-4 w-full justify-center" id="menu-container">
+          <!-- Javascript based button generated -->
+        </div>
+        <div class="flex justify-center gap-[6px]">
+          <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-[20px] hover:bg-gray-300" id="close-modal">
+            Tutup
+          </button>
+          <button class="px-4 py-2 bg-blue-600 text-white rounded-[20px] hover:bg-blue-700">
+            Konfirmasi
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- main component -->
+  <main class="w-full ml-[351px] h-screen bg-white">
+
+    <!-- header component -->
+    <header class="w-full h-[83px] shadow-lg px-[40px] py-[16px] flex justify-end">
+      <div class="user-profile h-full w-[184px] flex gap-[10px]">
+        <a href="">
+          <img src="https://ik.imagekit.io/571fcyuhs/Loop/user-icon.png?updatedAt=1735543506187" alt="user-icon"
+            class="icon-profile h-full">
+        </a>
+        <div class="summary-profile">
+          <p class="text-title4 font-bold">User 101</p>
+          <p class="text-body2">user101@gmail.com</p>
+        </div>
+      </div>
+    </header>
+  </main>
+
+  <script>
+    document.getElementById("close-modal").addEventListener("click", () => {
+      document.getElementById("modal-overlay").classList.add("hidden");
+    });
+
+    // Daftar pilihan
+    const menuOptions = ["Article", "News", "Blog"];
+
+    // Container tombol
+    const menuContainer = document.getElementById("menu-container");
+
+    // Generate tombol dengan perulangan
+    menuOptions.forEach(option => {
+      const button = document.createElement("button");
+      button.textContent = option;
+      button.className =
+        "menu-option px-4 py-2 border rounded-lg text-gray-700 hover:bg-gray-200 focus:bg-blue-600 focus:text-white";
+      button.dataset.value = option.toLowerCase();
+      menuContainer.appendChild(button);
+    });
+
+    // Tambahkan logika untuk memilih satu tombol saja
+    document.querySelectorAll('.menu-option').forEach(button => {
+      button.addEventListener('click', () => {
+        // Reset semua tombol
+        document.querySelectorAll('.menu-option').forEach(btn => {
+          btn.classList.remove('bg-blue-600', 'text-white');
+          btn.classList.add('text-gray-700', 'hover:bg-gray-200');
+        });
+
+        // Tambahkan gaya aktif ke tombol yang diklik
+        button.classList.add('bg-blue-600', 'text-white');
+        button.classList.remove('text-gray-700', 'hover:bg-gray-200');
+      });
+    });
+
+  </script>
+</body>
+
+</html>

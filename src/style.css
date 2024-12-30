@@ -2,6 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 
-. {
+* {
   box-sizing: border-box;
+}
+.bg-black {
+  background-color: #131127;
+}
+.bg-white {
+  background-color: #fcfcfd;
+}
+.text-white {
+  color: #fcfcfd;
+}
+.bg-dark {
+  background-color: #fbab18;
+}
+.bg-blue {
+  background-color: #3bbbec;
+}
+.bg-gray {
+  background-color: #b3b2b7;
+}
+.border-gray {
+  border-color: #b3b2b7;
+}
+.bg-green {
+  background-color: #2bc058;
+}
+.bg-red {
+  background-color: #ef453c;
+}
+.bg-bluegray {
+  background-color: #64748b;
+}
+.text-title1 {
+  font-size: 48px;
+}
+.text-title2 {
+  font-size: 34px;
+}
+.text-title3 {
+  font-size: 24px;
+}
+.text-title4 {
+  font-size: 20px;
+}
+.text-body1 {
+  font-size: 16px;
+}
+.text-body2 {
+  font-size: 14px;
+}
+.text-caption {
+  font-size: 12px;
+}
+.text-overline {
+  font-size: 10px;
+}
+.text-overline {
+  font-size: 10px;
+}
+.btnSm {
+  font-weight: 600;
+  font-size: 14px;
+}
+.btnMd {
+  font-weight: 600;
+  font-size: 16px;
+}
+.btnLg {
+  font-weight: 600;
+  font-size: 18px;
+}
+.fontVerySmall {
+  font-weight: 600;
+  font-size: 12px;
+}
+.fontSmallest {
+  font-weight: 600;
+  font-size: 10px;
 }
